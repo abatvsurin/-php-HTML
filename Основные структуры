@@ -1,1 +1,42 @@
+1) Условие 
 
+if ($a > $b) {
+    echo "a больше, чем b";
+} elseif ($a == $b) {
+    echo "a равен b";
+} else {
+    echo "a меньше, чем b";
+}
+
+switch ($i) {
+    case 0:
+        echo "i равно 0";
+        break;
+    case 1:
+        echo "i равно 1";
+        break;
+    case 2:
+        echo "i равно 2";
+        break;
+}
+
+
+2) Цыклы
+
+------ FOR ------
+for ($i = 1; $i <= 10; $i++) {
+    echo $i;
+}
+
+------ WHILE ------
+$i = 1;
+while ($i <= 10) {
+    echo $i++;  
+    $i++;
+}
+
+------ FOREACH ------
+$arr = array(1, 2, 3, 4);
+foreach ($arr as &$value) {
+    $value = $value * 2;
+}
