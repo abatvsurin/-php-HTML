@@ -1,0 +1,39 @@
+1) ПОдключение к БД
+
+  $db = mysql_connect('Сервер MySQL','Пользователь БД','Пароль для доступа к БД');
+  mysql_select_db('db_name', $db);
+
+
+2) Выборка с БД - SELECT
+
+  /*Делаем запрос к БД*/
+  $result = mysql_query("SELECT * FROM first_table",$db);
+  /*Преобразовываем результат в массив*/
+  $myrow = mysql_fetch_array($result);
+  /*Выводим результат на экран*/
+  echo $myrow['name'];
+  
+  
+3) Добавление записи в БД - INSERT
+  
+  $result = mysql_query ("INSERT INTO таблица (поле 1, поле 2, поле N) VALUES ('значение 1', 'значение 2', 'значение N')");
+  
+  
+4) Обновление записи в БД - UPDATE
+
+  $result = mysql_query ("UPDATE таблица SET поле 1='значение 1', поле 2='значение 2' WHERE условие");
+  
+5) Удаление записи с БД - DELETE
+  
+  $result = mysql_query ("DELETE FROM таблица WHERE условие");
+  
+
+6) Замена записи - REPLACE
+  REPLACE INTO table_name
+  SET
+  `column_1` = 'data1',
+  `column_2` = 'data2',
+  `column_3` = 'data3'
+  
+
+Подробно расписано - http://dmitriydenisov.com/php-mysql/php-basics/osnovy-php-i-mysql.html
